@@ -23,6 +23,22 @@
 
 %-------------Dokument-----------------
 
-\begin{document} 
-\include{arbeit}
-\end{document}
+\begin{document}%Beginn des Dokumentes
+\newcounter{savepage}
+\pagenumbering{Roman}%Die ersten Seiten römisch nummerieren
+
+\maketitle%Titelblatt erstellen
+\setcounter{page}{1}%TOC als erste Seite
+\tableofcontents%Inhaltsverzeichnis einfügen
+
+\cleardoublepage
+\setcounter{savepage}{\arabic{page}}%Seitenstand der römischen Nummerierung speichern um später dort weiterzuzählen
+
+\pagenumbering{arabic}%arabische Nummerierung
+\include{textteil}%Datei mit eigentlichem Text einbinden
+\pagenumbering{Roman}%römische Nummerierung
+\setcounter{page}{\thesavepage}%Seitencounter auf die gespeicherte Zahl setzen
+
+\printbibliography[nottype=online, heading=bibintoc]%Literaturverzeichnis der NICHT-Onlinequellen drucken und ins Inhaltsverzeichnis einfügen
+\printbibliography[type=online, title={Internetquellen}, heading=bibintoc]%Literaturverzeichnis der Onlinequellen drucken und ins Inhaltsverzeichnis einfügen 
+\end{document}%Ende des Dokumentes
