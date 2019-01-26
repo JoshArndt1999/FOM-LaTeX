@@ -1,4 +1,4 @@
-\documentclass[12pt, a4paper, ngerman]{scrreprt} 
+\documentclass[12pt, a4paper, ngerman,listof=totoc,bibliography=totoc]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc} 
 \usepackage[german]{babel} 
@@ -30,6 +30,8 @@
 \maketitle%Titelblatt erstellen
 \setcounter{page}{1}%TOC als erste Seite
 \tableofcontents%Inhaltsverzeichnis einfügen
+\listoffigures%Abbildungsverzeichnis einfügen
+\listoftables%Tabellenverzeichnis einfügen
 
 \cleardoublepage
 \setcounter{savepage}{\arabic{page}}%Seitenstand der römischen Nummerierung speichern um später dort weiterzuzählen
@@ -39,6 +41,6 @@
 \pagenumbering{Roman}%römische Nummerierung
 \setcounter{page}{\thesavepage}%Seitencounter auf die gespeicherte Zahl setzen
 
-\printbibliography[nottype=online, heading=bibintoc]%Literaturverzeichnis der NICHT-Onlinequellen drucken und ins Inhaltsverzeichnis einfügen
-\printbibliography[type=online, title={Internetquellen}, heading=bibintoc]%Literaturverzeichnis der Onlinequellen drucken und ins Inhaltsverzeichnis einfügen 
+\printbibliography[nottype=online]%Literaturverzeichnis der NICHT-Onlinequellen drucken und ins Inhaltsverzeichnis einfügen
+\printbibliography[type=online, title={Internetquellen}]%Literaturverzeichnis der Onlinequellen drucken und ins Inhaltsverzeichnis einfügen 
 \end{document}%Ende des Dokumentes
