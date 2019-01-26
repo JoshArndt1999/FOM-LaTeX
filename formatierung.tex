@@ -1,0 +1,26 @@
+\setlength{\parindent}{0em}%Einrückung nach Absatz auf 0 setzen
+\usepackage[onehalfspacing]{setspace}%Zeilenabstand auf 1,5 stellen
+\usepackage[a4paper, left=4cm, right=2cm, top=2cm, bottom=2cm, headsep=2cm, includehead=true, footskip=0cm, includefoot=true]{geometry}%Seitenränder gesetzt
+
+%-----------Kopf/Fußzeile--------------
+
+\usepackage[automark, headsepline=.4pt]{scrlayer-scrpage}%Paket für Kopfzeile
+\newpairofpagestyles{myheading}%Kopfzeile definieren
+{
+	\ihead{\leftmark}%Kapitelname links in Kopfzeile
+	\chead{}%nichts in der Mitte
+	\ohead{\thepage}%Seitenzahl rechts in Kopfzeile
+}
+
+
+\pagestyle{myheading}%Kopfzeile aktiv machen
+\renewcommand*\chapterpagestyle{myheading}%Kopfzeile auch auf Seiten mit neuem Kapitel anzeigen
+
+%----------Kapitelüberschriften formatieren-------
+
+\setkomafont{disposition}{\rmfamily\bfseries}%Alle Überschriften mit Serifen und Fett
+\setkomafont{chapter}{\huge}%Kapitelüberschriften in Groß
+\setkomafont{section}{\large}%Sektionsüberschriften in Groß
+
+\RedeclareSectionCommand[beforeskip=12pt, afterskip=6pt]{chapter}%12pt vor und 6pt nach Kapitelüberschrift
+\RedeclareSectionCommand[beforeskip=12pt, afterskip=6pt]{section}%12pt vor und 6pt nach Kapitelüberschrift
