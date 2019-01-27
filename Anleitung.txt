@@ -1,0 +1,16 @@
+Anleitung:
+
+Kapitel werden als eigene .tex Datei im Verzeichnie Textteil/Kapitel angelegt
+	Beginnend mit \chapter{Kapitelname}
+	
+Abbildungen werden folgendermaßen eingefügt
+\begin{figure}[!htb] 
+   \centering 
+   \begin{minipage}{8cm} 
+   \caption{FOM Logo 2019} 
+   \label{fig:fom_logo} 
+   \includegraphics[width=\textwidth]{Abbildungen/fom_logo.png} 
+   \par\smallskip 
+   In Anlehnung an das schöne Bild: \cite[12]{elk}
+   \end{minipage} 
+\end{figure} 
