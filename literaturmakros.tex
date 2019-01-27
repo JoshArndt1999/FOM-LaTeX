@@ -1,10 +1,4 @@
-%https://golatex.de/eigener-zitierstil-anpassung-authoryear-icomp-t20497,start,30.html
-
 \setlength\bibhang{1cm} 
-
-\DefineBibliographyStrings{german}{% 
-urlseen = {Zugriff am}, 
-}
 
 \renewcommand*{\finentrypunct}{} 
 
@@ -27,7 +21,7 @@ urlseen = {Zugriff am},
 
 \DeclareNameAlias{default}{family-given} 
 \DeclareNameAlias{sortname}{default} 
-\DeclareNameAlias{labelname}{family-given:init}
+\DeclareNameAlias{labelname}{family-given:init} 
 
 \DeclareFieldFormat{editortype}{\mkbibparens{#1}} 
 \DeclareDelimFormat{editortypedelim}{\addspace} 
@@ -40,13 +34,33 @@ urlseen = {Zugriff am},
 \DeclareFieldFormat*{booktitle}{#1} 
 \DeclareFieldFormat*{journaltitle}{#1} 
 
-\DeclareFieldFormat[online]{date}{\mkbibparens{#1}} 
+\newbibmacro*{organization+location}[1]{% 
+  \printlist{location}% 
+  \setunit*{\locdatedelim}% 
+  \printlist{organization}% 
+  \newunit} 
+
+
 \usepackage{xpatch} 
 \xpatchbibdriver{online} 
-  {\printlist{organization+location+date}} 
-  {\setunit{\addspace}\usebibmacro{organization+location+date}} 
+  {\usebibmacro{organization+location+date}} 
+  {\usebibmacro{organization+location}} 
   {}{} 
 
+\DeclareFieldFormat[online]{date}{\mkbibparens{#1}} 
+
+\DeclareFieldFormat{url}{<\url{#1}>}% oder {$\langle$\url{#1}$\rangle$} oder \textlangle/\textrangle 
+\DeclareFieldFormat{urldate}{\mkbibbrackets{\bibstring{urlseen}\addcolon\space#1}} 
+\renewbibmacro*{url+urldate}{% 
+  \usebibmacro{url}% 
+  \ifentrytype{online} 
+    {\setunit{\addspace}% 
+     \usebibmacro{date}} 
+    {}% 
+  \iffieldundef{urlyear} 
+    {} 
+    {\setunit*{\addspace}% 
+     \usebibmacro{urldate}}} 
 
 \renewbibmacro*{date+extradate}{% 
   \printtext[parens]{% 
@@ -56,7 +70,8 @@ urlseen = {Zugriff am},
 
 \DefineBibliographyStrings{german}{ 
   nodate    = {{}o.\adddot J\adddot}, 
-  andothers = {et\addabbrvspace al\adddot} 
+  andothers = {et\addabbrvspace al\adddot}, 
+  urlseen   = {Zugriff}, 
 } 
 
 \DeclareSourcemap{ 
@@ -89,4 +104,4 @@ urlseen = {Zugriff am},
   \setunit{\postnotedelim}% 
   \iffieldundef{postnote} 
     {\printtext{o.S\adddot}} 
-    {\printfield{postnote}}} 
+    {\printfield{postnote}}}
