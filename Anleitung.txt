@@ -14,3 +14,5 @@ Abbildungen werden folgendermaßen eingefügt
    In Anlehnung an das schöne Bild: \cite[12]{elk}
    \end{minipage} 
 \end{figure} 
+
+Zitate mit \autocite{} einfügen!

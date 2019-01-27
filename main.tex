@@ -1,11 +1,16 @@
-\documentclass[12pt, a4paper, ngerman,listof=totoc,bibliography=totoc,captions=figureheading, 
+\documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading, 
    captions=nooneline]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}%schönere schrift 
+
+
 \usepackage{graphicx}
-%\usepackage{float} 
+\usepackage{chngcntr}%Paket für Abbildungsnummerierung ändern
+\counterwithout{figure}{chapter}%ändern der Nummerierung zu aufsteigend
 \usepackage[labelfont=bf]{caption}
+
+
 \usepackage[german]{babel} 
 \usepackage[babel,german=quotes]{csquotes} 
 \usepackage[backend=biber, style=ext-authoryear, maxcitenames=2, maxbibnames=999, mergedate=false, innamebeforetitle, dashed=false, autocite=footnote]{biblatex}%Bibliotheksverwaltung (siehe goLatex FOM)
