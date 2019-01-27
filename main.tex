@@ -6,10 +6,12 @@
 
 
 \usepackage{graphicx}
+\usepackage{float}
 \usepackage{chngcntr}%Paket für Abbildungsnummerierung ändern
 \counterwithout{figure}{chapter}%ändern der Nummerierung zu aufsteigend
-\usepackage[labelfont=bf]{caption}
-
+\usepackage[labelfont=bf,position=top, skip = 6pt]{caption}
+\setlength{\textfloatsep}{12pt}
+\setlength{\intextsep}{12pt}
 
 \usepackage[german]{babel} 
 \usepackage[babel,german=quotes]{csquotes} 
