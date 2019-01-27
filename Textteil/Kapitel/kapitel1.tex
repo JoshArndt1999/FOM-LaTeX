@@ -1,12 +1,16 @@
 \chapter{Kapitel1}
 \blindtext{}\autocite{elk}
 
-\begin{figure}[!htb]
-  \centering
-  \caption{FOM Logo 2019}
-  \includegraphics[width=8cm]{Abbildungen/fom_logo.png} 
-  \\Quelle: \cite[12]{becker2016data}
-  \label{fom_logo}
-\end{figure}
+\begin{figure}[!htb] 
+   \centering 
+   \begin{minipage}{8cm} 
+   \caption{FOM Logo 2019} 
+   \label{fig:fom_logo} 
+   \includegraphics[width=\textwidth]{Abbildungen/fom_logo.png} 
+   \par\smallskip 
+   In Anlehnung an das schöne Bild: \cite[12]{elk}
+   \end{minipage} 
+\end{figure} 
 
-\blindtext{}
+\blindtext[12]{}\\
+Siehe Abbildung \ref{fig:fom_logo} auf Seite \pageref{fig:fom_logo}
