@@ -16,3 +16,4 @@ Abbildungen werden folgendermaßen eingefügt
 \end{figure} 
 
 Zitate mit \autocite{} einfügen!
+Indirekte Zitate mit \directAutocite[Seite]{quelle}{zitat} angeben!
