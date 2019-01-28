@@ -1,5 +1,5 @@
-\documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading, 
-   captions=nooneline]{scrreprt} 
+%\documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading,captions=nooneline]{scrreprt} %Grafik mit 
+\documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}%schönere schrift 
@@ -9,9 +9,8 @@
 \usepackage{float}
 \usepackage{chngcntr}%Paket für Abbildungsnummerierung ändern
 \counterwithout{figure}{chapter}%ändern der Nummerierung zu aufsteigend
-\usepackage[labelfont=bf,position=top, skip = 6pt]{caption}
-\setlength{\textfloatsep}{12pt}
-\setlength{\intextsep}{12pt}
+\counterwithout{table}{chapter}%ändern der Nummerierung zu aufsteigend
+\usepackage[labelfont=bf,position=top, belowskip = 6pt, aboveskip=12pt]{caption}
 
 \usepackage[german]{babel} 
 \usepackage[babel,german=guillemets]{csquotes} 
@@ -23,7 +22,7 @@
 %----------MetaInformationen-----------
 
 \author{Josh Arndt}%Autor setzen
-\title{Of Cats and Dogs}%Titel setzen
+\title{Testdokument}%Titel setzen
 \date{24-01-2019}%Datum setzen
 
 %----------Weitere Einstellungen------------------
