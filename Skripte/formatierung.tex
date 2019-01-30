@@ -10,6 +10,14 @@
 	\ohead{\thepage}%Seitenzahl rechts in Kopfzeile
 }
 
+\usepackage[automark, headsepline=.4pt]{scrlayer-scrpage}%Paket für Kopfzeile
+\newpairofpagestyles{leer}%Kopfzeile definieren
+{
+	\ihead{}%Kapitelname links in Kopfzeile
+	\chead{}%nichts in der Mitte
+	\ohead{}%Seitenzahl rechts in Kopfzeile
+}
+
 
 \pagestyle{myheading}%Kopfzeile aktiv machen
 \renewcommand*\chapterpagestyle{myheading}%Kopfzeile auch auf Seiten mit neuem Kapitel anzeigen
