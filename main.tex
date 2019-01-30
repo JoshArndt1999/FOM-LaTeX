@@ -1,49 +1,78 @@
-%\documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading,captions=nooneline]{scrreprt} %Grafik mit 
+%-------------------------------------------------------------------------------
+%Dokumentenklasse und Schriftarten
+%-------------------------------------------------------------------------------
 \documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 \usepackage{lmodern}%schönere schrift 
+\usepackage[german]{babel}%Sprache und Silbentrennung
 
+\usepackage[onehalfspacing]{setspace}%Zeilenabstand auf 1,5 stellen
+\usepackage[a4paper, left=4cm, right=2cm, top=2cm, bottom=2cm, headsep=2cm, includehead=true, footskip=0cm, includefoot=true]{geometry} 
+%-------------------------------------------------------------------------------
+%Meta Infos laden
+%-------------------------------------------------------------------------------
+\input{Skripte/meta}
 
+%-------------------------------------------------------------------------------
+%Abbildungen einbinden
+%-------------------------------------------------------------------------------
 \usepackage{graphicx}
-\usepackage{float}
+\usepackage{float}%Festlegen von Float Objects mit [H]
 \usepackage{chngcntr}%Paket für Abbildungsnummerierung ändern
 \counterwithout{figure}{chapter}%ändern der Nummerierung zu aufsteigend
 \counterwithout{table}{chapter}%ändern der Nummerierung zu aufsteigend
-\usepackage[labelfont=bf,position=top, belowskip = 6pt, aboveskip=12pt]{caption}
+\usepackage[labelfont=bf,position=top, belowskip = 6pt, aboveskip=12pt]{caption}%Abstand zum Text festlegen
 
-\usepackage[german]{babel} 
-\usepackage[babel,german=guillemets]{csquotes} 
-\usepackage[backend=biber, style=ext-authoryear, maxcitenames=2, maxbibnames=999, mergedate=false, innamebeforetitle, dashed=false, autocite=footnote]{biblatex}%Bibliotheksverwaltung (siehe goLatex FOM)
+%-------------------------------------------------------------------------------
+%Zitate und Literaturverzeichnis
+%-------------------------------------------------------------------------------
+\usepackage[babel,german=guillemets]{csquotes} %Festlegen der Anführungszeichen
+\usepackage[backend=biber, style=ext-authoryear, maxcitenames=2, maxbibnames=999, mergedate=false, innamebeforetitle, dashed=false, autocite=footnote, mincrossrefs=1]{biblatex}%Bibliotheksverwaltung (siehe goLatex FOM)
 
 \usepackage{blindtext}%Paket für Blindtext Generierung
 
+%-------------------------------------------------------------------------------
+%Abkuerzungsverzeichnis
+%-------------------------------------------------------------------------------
+\usepackage[intoc]{nomencl}
+\renewcommand{\nomname}{Abkürzungsverzeichnis}%umbenennen
+\setlength{\nomlabelwidth}{.3\textwidth}%Breite des Tabstops festlegen
+%\renewcommand{\nomlabel}[1]{#1 \dotfill}%Füllen mit Punkt
+\setlength{\nomitemsep}{-\parsep}
+\makenomenclature
 
-%----------MetaInformationen-----------
-
-\author{Josh Arndt}%Autor setzen
-\title{Testdokument}%Titel setzen
-\date{24-01-2019}%Datum setzen
-
-%----------Weitere Einstellungen------------------
-
-\include{formatierung}%Datei mit Zitieranpassungen und Format des Literaturverzeichnisses
-\include{literaturmakros}%Datei mit Zitieranpassungen und Format des Literaturverzeichnisses
+%-------------------------------------------------------------------------------
+%Weitere Einstellungen
+%-------------------------------------------------------------------------------
+\input{Skripte/formatierung}%Datei mit Zitieranpassungen und Format des Literaturverzeichnisses
+\input{Skripte/literaturmakros}%Datei mit Zitieranpassungen und Format des Literaturverzeichnisses
+\input{Skripte/quelltext}%Sauber formatierter Quelltext
 \addbibresource{lit.bib}%include der Literatur Datenbank
 %\nocite{*}%UNBEDINGT AUSKOMMENTIEREN. ES WERDEN AUCH NICHT ZITIERTE QUELLEN VERZEICHNET
 %\addbibresource{biblatex-examples.bib}%Beispielliteratur einfügen
 
-%-------------Dokument-----------------
 
+
+
+
+
+
+
+%-------------------------------------------------------------------------------
+%Dokumentbeginn
+%-------------------------------------------------------------------------------
 \begin{document}%Beginn des Dokumentes
 \newcounter{savepage}
 \pagenumbering{Roman}%Die ersten Seiten römisch nummerieren
 
-\maketitle%Titelblatt erstellen
+%\maketitle%Titelblatt erstellen
+\input{Skripte/titelblatt}
 \setcounter{page}{1}%TOC als erste Seite
 \tableofcontents%Inhaltsverzeichnis einfügen
 \listoffigures%Abbildungsverzeichnis einfügen
 \listoftables%Tabellenverzeichnis einfügen
+\printnomenclature%Abkürzungsverzeichnis einfügen
 
 \cleardoublepage
 \setcounter{savepage}{\arabic{page}}%Seitenstand der römischen Nummerierung speichern um später dort weiterzuzählen
