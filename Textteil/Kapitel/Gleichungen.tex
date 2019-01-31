@@ -1,0 +1,62 @@
+\chapter{Gleichungen}
+Ein großer Vorteil der Nutzung von \LaTeX\ ist die gute Darstellung von Formeln und Gleichungen. 
+\section{Einzelne Gleichungen und Funktionen}
+Formeln können entweder innerhalb einer Zeile angezeigt werden wie hier ($a+b^2=\frac{34}{\sqrt{4}}$), oder aber abgesetzt werden:
+\[
+    a+b^2=\frac{34}{\sqrt{4}}
+\]
+Außerdem können Formeln nummeriert werden.
+\begin{equation}
+    a+b^2=\frac{34}{\sqrt{4}}
+\end{equation}
+Der Code hierfür würde beispielsweise folgendermaßen lauten:
+\begin{lstlisting}
+%Formel in Zeile
+$a+b^2=\frac{34}{\sqrt{4}}$
+
+%abgesetzte Formel
+\[
+    a+b^2=\frac{34}{\sqrt{4}}
+\]
+
+%nummerierte Formel
+\begin{equation}
+    a+b^2=\frac{34}{\sqrt{4}}
+\end{equation}
+\end{lstlisting}
+
+\section{Blöcke von Gleichungen und Funktionen}
+Um ganze Blöcke von Gleichungen zu erstellen, in welchen die GLeichheitszeichen untereinander dargestellt werden, nutzt man folgende Funktion:
+
+\begin{lstlisting}
+\begin{eqnarray}
+    y & = & d\\
+    y & = & c_x+d\\
+    y & = & b_x^{2}+c_x+d\\
+    y & = & a_x^{3}+b_x^{2}
+\end{eqnarray}
+\end{lstlisting}
+Es resultiert in folgendem Ergebnis:
+\begin{eqnarray}
+    y & = & d\\
+    y & = & c_x+d\\
+    y & = & b_x^{2}+c_x+d\\
+    y & = & a_x^{3}+b_x^{2}
+\end{eqnarray}
+
+Alternativ können die Blöcke ohne Nummerierung und etwas anders ausgerichtet folgendermaßen erstellt werden:
+\begin{lstlisting}
+\[\begin{array}{lcr}
+    y & \not= & d\\
+    y_{a}& = & c_x+d\\
+    y & = & b_x^{2}+c_x+d\\
+    y & = & a_x^{3}+b_x^{2}
+\end{array}\]
+\end{lstlisting}
+Dies sähe dann so aus:
+\[\begin{array}{lcr}
+    y & \not= & d\\
+    y_{a}& = & c_x+d\\
+    y & = & b_x^{2}+c_x+d\\
+    y & = & a_x^{3}+b_x^{2}
+\end{array}\]

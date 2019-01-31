@@ -12,10 +12,17 @@
 
 
 %-------------------------------------------------------------------------------
+%Mathematische Ausdrücke
+%-------------------------------------------------------------------------------
+\usepackage{amsmath}%Mathematische Ausdrücke
+\counterwithout{equation}{chapter}%Nummerierung aufsteigend ohne Kapitelnummer
+
+%-------------------------------------------------------------------------------
 %Link Umbrueche im Verzeichnis
 %-------------------------------------------------------------------------------
 \usepackage{hyperref}%zum Setzen von PDF Daten und umbrechen von Links
 \sloppy
+
 %-------------------------------------------------------------------------------
 %Meta Infos laden
 %-------------------------------------------------------------------------------
@@ -73,19 +80,32 @@
 \newcounter{savepage}
 \pagenumbering{Roman}%Die ersten Seiten römisch nummerieren
 
-%\maketitle%Titelblatt erstellen
+%-------------------------------------------------------------------------------
+%Titelblatt
+%-------------------------------------------------------------------------------
 \input{Skripte/titelblatt}
+
+%-------------------------------------------------------------------------------
+%Verzeichnisse
+%-------------------------------------------------------------------------------
 \setcounter{page}{1}%TOC als erste Seite
 \tableofcontents%Inhaltsverzeichnis einfügen
 \listoffigures%Abbildungsverzeichnis einfügen
 \listoftables%Tabellenverzeichnis einfügen
 \printnomenclature%Abkürzungsverzeichnis einfügen
-
 \cleardoublepage
-\setcounter{savepage}{\arabic{page}}%Seitenstand der römischen Nummerierung speichern um später dort weiterzuzählen
 
+%-------------------------------------------------------------------------------
+%Text
+%-------------------------------------------------------------------------------
+\setcounter{savepage}{\arabic{page}}%Seitenstand der römischen Nummerierung speichern um später dort weiterzuzählen
 \pagenumbering{arabic}%arabische Nummerierung
+
 \include{Textteil/textteil}%Datei mit eigentlichem Text einbinden
+\include{Textteil/Kapitel/Anhang}
+%-------------------------------------------------------------------------------
+%Verzeichnisse
+%-------------------------------------------------------------------------------
 \pagenumbering{Roman}%römische Nummerierung
 \setcounter{page}{\thesavepage}%Seitencounter auf die gespeicherte Zahl setzen
 
