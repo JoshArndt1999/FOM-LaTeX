@@ -1,11 +1,16 @@
+%!TEX TS-program = Arara
+% arara: pdflatex: {shell: yes}
+% arara: pdflatex: {shell: yes}
+
+
 %-------------------------------------------------------------------------------
 %Dokumentenklasse und Schriftarten
 %-------------------------------------------------------------------------------
 \documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading,hidelinks]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
-\usepackage{lmodern}%schönere schrift 
-\usepackage[german]{babel}%Sprache und Silbentrennung
+\usepackage{palatino}%schönere schrift 
+\usepackage[ngerman]{babel}%Sprache und Silbentrennung
 
 \usepackage[onehalfspacing]{setspace}%Zeilenabstand auf 1,5 stellen
 \usepackage[a4paper, left=4cm, right=2cm, top=2cm, bottom=2cm, headsep=2cm, includehead=true, footskip=0cm, includefoot=true]{geometry} 
