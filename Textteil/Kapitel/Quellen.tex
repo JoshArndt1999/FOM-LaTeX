@@ -1,5 +1,9 @@
+% !TeX root = ../../main.tex
+
 \chapter{Quellen}
-In \LaTeX\ werden die Quellen durch BibTeX oder BibLaTeX verwaltet. In diesem Template wurde BibLaTeX genutzt. Hier werden die verschiedenen Quellen in einer Art Datenbank gespeichert und im Dokument, wie bereits im Kapitel \nameref{ch:zitieren} auf Seite \pageref{ch:zitieren} gezeigt, referenziert. Dazu gibt es verschiedene Quelltypen, von denen die folgenden die meistgenutzten sind:\autocite[Vgl.][7]{biblatex}
+
+In \LaTeX\ werden die Quellen durch BibTeX oder BibLaTeX verwaltet. In diesem Template wurde BibLaTeX genutzt. Hier werden die verschiedenen Quellen in einer Art Datenbank gespeichert und im Dokument, wie bereits im Kapitel \nameref{ch:zitieren} auf seite \pageref{ch:zitieren} gezeigt, referenziert. Dazu gibt es verschiedene Quelltypen, von denen die folgenden die meistgenutzten sind:\autocite[Vgl.][7]{biblatex}
+
 \begin{itemize}
   \item article
   \item book
@@ -7,7 +11,9 @@ In \LaTeX\ werden die Quellen durch BibTeX oder BibLaTeX verwaltet. In diesem Te
   \item collection
   \item online
 \end{itemize}
+
 Die Quellen werden in einer datei mit der Endung .bib gespeichert und durch \enquote{\textbackslash addbibresource{dateiname.bib}} eingebunden. An der gewünschten Stelle wird dann durch \enquote{\textbackslash printBibliography} das Verzeichnis ausgegeben. Ein möglicher Eintrag könnte folgendermaßen aussehen:
+
 \begin{lstlisting}
 @online{biblatex,
     usera	=	{Biblatex},
