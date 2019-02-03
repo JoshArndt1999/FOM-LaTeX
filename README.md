@@ -1,9 +1,12 @@
 # FOM-LaTeX
-LaTeX Template for Essay and Thesis at FOM (Fachhochschule für Oekonomie und Management)<br>
+
+LaTeX Template for Essay and Thesis at FOM (Fachhochschule für Oekonomie und Management)
+
 Future comments are in German due to a German University.
 ---------------------------------------------------------
 
-Dies ist eine Vorlage für Hausarbeiten und Bachelorarbeiten an der FOM. Noch bin ich nicht lange bei LaTeX dabei, weshalb es durchaus auch mal zu Fehlern kommen kann. Kontrolliert also die Ergebnisse noch einmal, ob Formatierung etc. mit den AKTUELLEN Vorschriften übereinstimmen. Hierfür gebe ich selbstverständlich keine Gewähr. ;-)<br>
-Abgesehen davon freue ich mich über jegliche Beiträge und Vorschläge, die gerne als Issue hinzugefügt werden können.<br><br>
+Dies ist eine LaTeX-Vorlage für Hausarbeiten und Bachelorarbeiten an der FOM. Wir versuchen, so nah wie möglich an den Formvorschriften der FOM zu bleiben, können dies aber nicht garantieren. Bitte kontrolliert daher, ob die Vorlage noch den Vorschriften entspricht. 
 
-Eine Anleitung ist im PDF selbst vorhanden.
+Abgesehen davon freuen wir uns über jegliche Beiträge und Vorschläge, die gerne als Issue hinzugefügt werden können.
+
+Eine Anleitung zur Nutzung der Vorlage ist im PDF selbst enthalten.
