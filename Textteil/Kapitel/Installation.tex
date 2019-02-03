@@ -25,5 +25,5 @@ Hierzu kann in TexMaker unter Optionen die Funktion \enquote{TexMaker konfigurie
 Unter \enquote{Schnelles Übersetzen} wird dann die Befehlsabfolge wie folgt eingetragen: \enquote{pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/MikTex/miktex/bin/x64/makeindex.exe" \%.nlo -s nomencl.ist -o \%.nls|biber \%|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" \%.pdf}. 
 Gegebenenfalles muss der Pfad zum PDF-Viewer oder der makeindex.exe entsprechend der lokalen Installationsverzeichnisse werden.
 
-Alternativ kann unter \enquote{TexMaker konfigurieren} das Verzeichnis von MakeIndex angepasst werden und unter Bib(la)TeX der Befehl \enquote{biber \%} eingegeben werden. 
+Alternativ kann unter \enquote{TexMaker konfigurieren} das Verzeichnis von MakeIndex angepasst werden und unter Bib(la)TeX der Befehl \befehl{biber %} eingegeben werden. 
 Anschließend lässt sich unter \enquote{Schnelles Übersetzen} der obere Assistent aufrufen, bei dem man nun 1x pdfLatex, 1x MakeIndex, 1x BibTeX und 2x pdfLatex auswählt. 

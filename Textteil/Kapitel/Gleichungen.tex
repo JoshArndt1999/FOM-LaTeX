@@ -5,21 +5,25 @@ Ein großer Vorteil der Nutzung von \LaTeX\ ist die perfekte Darstellung von For
 \LaTeX\ gilt hier als Maßstab, an dem sich alle anderen Programme für den Formelsatz messen lassen müssen.
 
 \section{Einzelne Gleichungen und Funktionen}
-Formeln können entweder innerhalb einer Zeile angezeigt werden wie hier ($a+b^2=\frac{34}{\sqrt{4}}$), oder aber abgesetzt werden:
+Formeln können entweder innerhalb einer Zeile angezeigt werden wie hier (\(a+b^2=\frac{34}{\sqrt{4}}\)), oder aber abgesetzt werden:
+
 \[
     a+b^2=\frac{34}{\sqrt{4}}
 \]
 
-Außerdem können Formeln nummeriert werden.
+Außerdem können Formeln nummeriert werden. 
+Oft sieht man im Netz noch die Notation mit einfachen Dollarzeichen für die Inline-Notation und doppelten Dollar-Zeichen für abgesetzte Formeln. 
+Dies ist jedoch \TeX-Notation und wird für \LaTeX-Dokumente nicht empfohlen.
 
 \begin{equation}
     a+b^2=\frac{34}{\sqrt{4}}
 \end{equation}
 
 Der Code hierfür würde beispielsweise folgendermaßen lauten:
+
 \begin{lstlisting}
 %Formel in Zeile
-$a+b^2=\frac{34}{\sqrt{4}}$
+\(a+b^2=\frac{34}{\sqrt{4}}\)
 
 %abgesetzte Formel
 \[
