@@ -2,7 +2,10 @@
 
 \chapter{Referenzen}\label{ch:referenzen}
 
-Referenzen werden genutzt, wenn innerhalb des Textes auf Abbildungen, Tabellen oder Kapitel verwiesen werden soll. Um beim Einfügen eines weiteren Kapitels einen Verweis zu verfälschen (da Kapitel X nun etwas anderes ist), wird das Objekt über einen Marker (gesetzt durch \enquote{\textbackslash label\{marker\}}) referenziert. Hierzu gibt es zwei wichtige Befehle.
+Referenzen werden genutzt, wenn innerhalb des Textes auf Abbildungen, Tabellen oder Kapitel verwiesen werden soll. 
+Um beim Einfügen eines weiteren Kapitels einen Verweis zu verfälschen (da Kapitel X nun etwas anderes ist), wird das Objekt über einen Marker (gesetzt durch \enquote{\textbackslash label\{marker\}}) referenziert. 
+Hierzu gibt es zwei wichtige Befehle.
+
 \begin{description}
 \item[{\textbackslash nameref\{marker\}}] erzeugt den Namen des Objektes.
 \item[{\textbackslash ref\{marker\}}] erzeugt die Objektnummer, also ob es sich um Tabelle 1, 2 oder 3 etc. handelt.
@@ -11,10 +14,12 @@ Referenzen werden genutzt, wenn innerhalb des Textes auf Abbildungen, Tabellen o
 
 \section{Beispiel}
 Hier ist ein kleines Beispiel zur Nutzung von Referenzen.
+
 \begin{lstlisting}
 Die Abbildung \nameref{fig:fom_logo} hat die Nummer \ref{fig:fom_logo} und ist auf Seite \pageref{fig:fom_logo}
 \end{lstlisting}
 Ausgabe: \enquote{Die Abbildung \nameref{fig:fom_logo} hat die Nummer \ref{fig:fom_logo} und ist auf Seite \pageref{fig:fom_logo}}
 
 \section{Warnung}
+
 Dieses Kapitel ist lediglich dazu da, dich daran zu erinnnern, dass es niemals ein Kapitel mit nur einem Unterkapitel geben darf. ;-)

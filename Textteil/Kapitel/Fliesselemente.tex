@@ -2,7 +2,9 @@
 
 \chapter{Fließelemente}\label{ch:fliesselemente}
 
-Fließelemente sind Elemente, welche sich (wie der Name schon sagt) fließend im Text bewegen. Dazu gehören vor allen Dingen Abbildungen und Tabellen. Um diese der FOM entsprechend einzufügen, muss eine Reihe von Befehlen genutzt werden.
+Fließelemente sind Elemente, welche sich (wie der Name schon sagt) fließend im Text bewegen. Das bedeutet, dass \LaTeX\ diese dort positioniert, wo es \enquote{denkt}, dass es am besten passt. Dies funktioniert in den meisten Fällen auch recht gut.
+Zu Fließelementen gehören vor allen Dingen Abbildungen und Tabellen. 
+Um diese der FOM entsprechend einzufügen, muss eine Reihe von Befehlen genutzt werden.
 
 Es gibt einige Felder, welche hier vom Nutzer angepasst werden müssen:
 
@@ -37,7 +39,10 @@ Dieses Beispiel sieht anschließend folgendermaßen aus:
 \end{figure} 
 
 \section{Tabellen}
-Tabellen werden ähnlich wie Abbildungen eingefügt. Hinzu kommt jedoch die Syntax, mit welcher die Tabelle als solche (unabhängig vom Float Element) erzeugt wird. Ein Beispiel ist folgendes:
+Tabellen werden ähnlich wie Abbildungen eingefügt. 
+Hinzu kommt jedoch die Syntax, mit welcher die Tabelle als solche (unabhängig vom Float Element) erzeugt wird. 
+Ein Beispiel ist folgendes:
+
 \begin{lstlisting}
 \begin{table}[H]
 	\centering
@@ -76,11 +81,17 @@ Diese Tabelle sieht anschließend folgendermaßen aus:
 	\par\smallskip 
 	Quelle: \cite[13]{bsp}
 \end{table}
-In den Parametern des ''tabular''s wird die Anzahl der Spalten und die Darstellung der vertikalen Linien bestimmt. Ein Pipe-Symbol steht hierbei für eine vertikale Linie an der entsprechenden Stelle, während ein Buchstabe für eine Spalte steht. Es können folgende Buchstaben genutzt werden:
+
+In den Parametern des ''tabular''s wird die Anzahl der Spalten und die Darstellung der vertikalen Linien bestimmt. 
+Ein Pipe-Symbol steht hierbei für eine vertikale Linie an der entsprechenden Stelle, während ein Buchstabe für eine Spalte steht. Es können folgende Buchstaben genutzt werden:
 \begin{description}
 	\item[c] steht für eine Spalte mit zentriertem Text.
 	\item[l] steht für eine Spalte mit linksbündigem Text.
 	\item[r] steht für eine Spalte mit rechtsbündigem Text.
 \end{description}
 
-Im Anschluss wird durch \enquote{\textbackslash hline} eine horizonale Linie erzeugt. Diese ist in diesem Fall die oberste Linie der Tabelle. Die nächste Zeile beschreibt die Spalteninhalte. Hier werden in diesem Fall Spaltennamen (N1 etc.) gesetzt, bevor zwei weitere Linien zur Begrenzung der Titelzeile eingefügt werden. Darauffolgend werden die restlichen Zellen gesetzt.
+Im Anschluss wird durch \enquote{\textbackslash hline} eine horizonale Linie erzeugt. 
+Diese ist in diesem Fall die oberste Linie der Tabelle. 
+Die nächste Zeile beschreibt die Spalteninhalte. 
+Hier werden in diesem Fall Spaltennamen (N1 etc.) gesetzt, bevor zwei weitere Linien zur Begrenzung der Titelzeile eingefügt werden. 
+Darauffolgend werden die restlichen Zellen gesetzt.

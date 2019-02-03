@@ -1,16 +1,21 @@
 % !TeX root = ../../main.tex
 
 \chapter{Gleichungen}
-Ein großer Vorteil der Nutzung von \LaTeX\ ist die gute Darstellung von Formeln und Gleichungen. 
+Ein großer Vorteil der Nutzung von \LaTeX\ ist die perfekte Darstellung von Formeln und Gleichungen. 
+\LaTeX\ gilt hier als Maßstab, an dem sich alle anderen Programme für den Formelsatz messen lassen müssen.
+
 \section{Einzelne Gleichungen und Funktionen}
 Formeln können entweder innerhalb einer Zeile angezeigt werden wie hier ($a+b^2=\frac{34}{\sqrt{4}}$), oder aber abgesetzt werden:
 \[
     a+b^2=\frac{34}{\sqrt{4}}
 \]
+
 Außerdem können Formeln nummeriert werden.
+
 \begin{equation}
     a+b^2=\frac{34}{\sqrt{4}}
 \end{equation}
+
 Der Code hierfür würde beispielsweise folgendermaßen lauten:
 \begin{lstlisting}
 %Formel in Zeile
@@ -28,7 +33,9 @@ $a+b^2=\frac{34}{\sqrt{4}}$
 \end{lstlisting}
 
 \section{Blöcke von Gleichungen und Funktionen}
+
 Um ganze Blöcke von Gleichungen zu erstellen, in welchen die Gleichheitszeichen untereinander dargestellt werden, nutzt man folgende Funktion:
+
 \begin{lstlisting}
 \begin{eqnarray}
     y & = & d\\
@@ -37,7 +44,9 @@ Um ganze Blöcke von Gleichungen zu erstellen, in welchen die Gleichheitszeichen
     y & = & a_x^{3}+b_x^{2}
 \end{eqnarray}
 \end{lstlisting}
+
 Es resultiert in folgendem Ergebnis:
+
 \begin{eqnarray}
     y & = & d\\
     y & = & c_x+d\\
@@ -46,6 +55,7 @@ Es resultiert in folgendem Ergebnis:
 \end{eqnarray}
 
 Alternativ können die Blöcke ohne Nummerierung und etwas anders ausgerichtet folgendermaßen erstellt werden:
+
 \begin{lstlisting}
 \[\begin{array}{lcr}
     y & \not= & d\\
@@ -54,7 +64,9 @@ Alternativ können die Blöcke ohne Nummerierung und etwas anders ausgerichtet f
     y & = & a_x^{3}+b_x^{2}
 \end{array}\]
 \end{lstlisting}
+
 Dies sähe dann so aus:
+
 \[\begin{array}{lcr}
     y & \not= & d\\
     y_{a}& = & c_x+d\\
