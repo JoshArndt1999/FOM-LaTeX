@@ -83,14 +83,17 @@ Diese Tabelle sieht anschließend folgendermaßen aus:
 \end{table}
 
 In den Parametern des ''tabular''s wird die Anzahl der Spalten und die Darstellung der vertikalen Linien bestimmt. 
-Ein Pipe-Symbol steht hierbei für eine vertikale Linie an der entsprechenden Stelle, während ein Buchstabe für eine Spalte steht. Es können folgende Buchstaben genutzt werden:
+Ein Pipe-Symbol steht hierbei für eine vertikale Linie an der entsprechenden Stelle, während ein Buchstabe für eine Spalte steht. 
+Ein Hinweis: Senkrechte Linien gelten als typografisch unschön, wenn möglich soll man auf sie verzichten.
+
+Es können folgende Buchstaben genutzt werden:
 \begin{description}
 	\item[c] steht für eine Spalte mit zentriertem Text.
 	\item[l] steht für eine Spalte mit linksbündigem Text.
 	\item[r] steht für eine Spalte mit rechtsbündigem Text.
 \end{description}
 
-Im Anschluss wird durch \enquote{\textbackslash hline} eine horizonale Linie erzeugt. 
+Im Anschluss wird durch \befehl{\hline} eine horizonale Linie erzeugt. 
 Diese ist in diesem Fall die oberste Linie der Tabelle. 
 Die nächste Zeile beschreibt die Spalteninhalte. 
 Hier werden in diesem Fall Spaltennamen (N1 etc.) gesetzt, bevor zwei weitere Linien zur Begrenzung der Titelzeile eingefügt werden. 

@@ -5,25 +5,31 @@
 Zur Nutzung von \LaTeX\ müssen zunächst einmal einige Dinge auf dem Rechner installiert werden. 
 Es folgt eine kleine Anleitung, mit der auch das kein Problem sein sollte.
 
+\section{\TeX\ Live}
+
+\TeX\ Live wird insbesondere dann empfohlen, wenn man nicht nur unter Windows, sondern auch unter Linux/Unix mit \LaTeX\ arbeiten will. Aber auch unter Windows ist \TeX\ Live empfehlenswert, da ein sehr aktives Entwicklerteam dahinter steht. Unter Windows bringt \TeX\ Live \TeX Works als Editor mit.
+
 \section{MiKTeX}
-MiKTeX ist neben \TeX\ Live und MacTex eine der größten Distributionen, die es von TeX gibt. 
-Für Windows Systeme ist diese sinnvoll und installiert Pakete, welche noch nicht heruntergeladen wurden, automatisch nach.
+
+MiKTeX ist neben \TeX\ Live und MacTex auch eine sehr gute \TeX\ Distribution. Es gibt MikTeX nur für Windows, eines der Features ist die automatische Nach-Installation von Paketen, sofern eine Internetverbindung besteht.
 
 Der Download Link für MiKTeX ist in den Quellen vorhanden.\autocite[Vgl.][]{miktex} Hierbei kann der gewöhnliche \directAutocite{miktex}{Installer} verwendet werden. 
 
-Anschließend führt das Installationsprogramm den Nutzer durch den gesamten Installationsprozess. Hierbei muss nichts besonderes beachtet werden.
+Anschließend führt das Installationsprogramm den Nutzer durch den gesamten Installationsprozess. Hierbei muss nichts besonderes beachtet werden. Ebenso wie \TeX\ Live unter Windows bringt MikTeX \TeX Works als Editor mit.
 
-\section{TexMaker}
-TexMaker ist ein bekannter Editor im \LaTeX-Umfeld. 
-Zwar ist es möglich, sämtliche Dokumente in Texteditoren wie Notepad++ zu erstellen und diese über die Eingabeaufforderung zu einem PDF (\nomenclature{PDF}{Portable Document Format}Portable Document Format) umzuwandeln, doch bietet TexMaker angenehme Funktionen für die erleichterte Nutzung.
+\section{Texmaker}
+
+Texmaker ist ein bekannter Editor im \LaTeX-Umfeld. 
+Zwar ist es möglich, sämtliche Dokumente in Texteditoren wie Notepad++ zu erstellen und diese über die Eingabeaufforderung zu einem PDF (\nomenclature{PDF}{Portable Document Format}Portable Document Format) umzuwandeln, doch bietet TeXMaker angenehme Funktionen für die erleichterte Nutzung.
 
 Auch hier gibt es einen normalen Installer zum Download, welcher alle weiteren Schritte erklärt.\autocite[Vgl.][]{texmaker}
 
-Zum Einrichten von TexMakter muss noch eine weitere Einstellung vorgenommen werden. 
-Da \LaTeX\ zum Bilden von Referenzen, Generieren von Verzeichnissen etc zunächst temporäre Dateien erzeugt, welche erst beim nächsten Kompilieren genutzt werden, müssen eine Reihe von Compile-Befehlen nacheinander aufgerufen werden. 
-Hierzu kann in TexMaker unter Optionen die Funktion \enquote{TexMaker konfigurieren} aufgerufen werden. 
-Unter \enquote{Schnelles Übersetzen} wird dann die Befehlsabfolge wie folgt eingetragen: \enquote{pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/MikTex/miktex/bin/x64/makeindex.exe" \%.nlo -s nomencl.ist -o \%.nls|biber \%|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" \%.pdf}. 
-Gegebenenfalles muss der Pfad zum PDF-Viewer oder der makeindex.exe entsprechend der lokalen Installationsverzeichnisse werden.
+Zum Einrichten von Texmaker muss noch eine weitere Einstellung vorgenommen werden. 
+Da \LaTeX\ zum Bilden von Referenzen, Generieren von Verzeichnissen, etc. zunächst temporäre Dateien erzeugt, welche erst beim nächsten Kompilieren genutzt werden, müssen eine Reihe von Compile-Befehlen nacheinander aufgerufen werden. 
+Hierzu kann in Texmaker unter Optionen die Funktion \enquote{Texmaker konfigurieren} aufgerufen werden. 
+Unter \enquote{Schnelles Übersetzen} wird dann die folgende Befehlsabfolge eingetragen: \enquote{pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/MikTex/miktex/bin/x64/makeindex.exe" \%.nlo -s nomencl.ist -o \%.nls|biber \%|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" \%.pdf}. 
 
-Alternativ kann unter \enquote{TexMaker konfigurieren} das Verzeichnis von MakeIndex angepasst werden und unter Bib(la)TeX der Befehl \befehl{biber %} eingegeben werden. 
-Anschließend lässt sich unter \enquote{Schnelles Übersetzen} der obere Assistent aufrufen, bei dem man nun 1x pdfLatex, 1x MakeIndex, 1x BibTeX und 2x pdfLatex auswählt. 
+Gegebenenfalles muss der Pfad zum PDF-Viewer oder der \texttt{makeindex.exe} entsprechend der lokalen Installationsverzeichnisse werden.
+
+Alternativ kann unter \enquote{Texmaker konfigurieren} das Verzeichnis von MakeIndex angepasst werden und unter Bib(la)TeX der Befehl \befehl{biber %} eingegeben werden. 
+Anschließend lässt sich unter \enquote{Schnelles Übersetzen} der obere Assistent aufrufen, bei dem man nun sequentiell \texttt{pdfLatex}, \texttt{makeindex},  \texttt{biber} und abschließend noch zweimal \texttt{pdflatex} ausführt. 

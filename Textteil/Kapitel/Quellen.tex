@@ -4,7 +4,7 @@
 
 In \LaTeX\ werden die Quellen durch BibTeX oder BibLaTeX verwaltet. 
 In diesem Template wurde BibLaTeX genutzt, die Nutzung von BibTeX wird nicht mehr empfohlen.
-Hier werden die verschiedenen Quellen in einer Art Datenbank gespeichert und im Dokument, wie bereits im Kapitel \nameref{ch:zitieren} auf seite \pageref{ch:zitieren} gezeigt, referenziert. 
+Hier werden die verschiedenen Quellen in einer Art Datenbank gespeichert und im Dokument, wie bereits im Kapitel \nameref{ch:zitieren} auf Seite \pageref{ch:zitieren} gezeigt, referenziert. 
 Dazu gibt es verschiedene Quelltypen, von denen die folgenden die meistgenutzten sind:\autocite[Vgl.][7]{biblatex}
 
 \begin{itemize}
@@ -15,8 +15,8 @@ Dazu gibt es verschiedene Quelltypen, von denen die folgenden die meistgenutzten
   \item online
 \end{itemize}
 
-Die Quellen werden in einer datei mit der Endung .bib gespeichert und durch \enquote{\textbackslash addbibresource{dateiname.bib}} eingebunden. 
-An der gewünschten Stelle wird dann durch \enquote{\textbackslash printBibliography} das Verzeichnis ausgegeben. 
+Die Quellen werden in einer datei mit der Endung \texttt{.bib} gespeichert und durch \befehl|\addbibresource{dateiname.bib}| eingebunden. 
+An der gewünschten Stelle wird dann durch \befehl|\printbibliography| das Verzeichnis ausgegeben. 
 Ein möglicher Eintrag könnte folgendermaßen aussehen:
 
 \begin{lstlisting}
@@ -30,3 +30,5 @@ Ein möglicher Eintrag könnte folgendermaßen aussehen:
     subtitle=   {Das Benutzerhandbuch},
 }
 \end{lstlisting}
+
+Da die manuelle Bearbeitung von \texttt{bib}-Dateien recht mühselig ist, sei an dieser Stelle auf JabRef (\url{http://www.jabref.org/}) verwiesen, eine sehr gute und plattform-unabhängige Literatur-Verwaltung.
