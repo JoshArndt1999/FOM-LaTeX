@@ -27,7 +27,7 @@ Auch hier gibt es einen normalen Installer zum Download, welcher alle weiteren S
 Zum Einrichten von Texmaker muss noch eine weitere Einstellung vorgenommen werden. 
 Da \LaTeX\ zum Bilden von Referenzen, Generieren von Verzeichnissen, etc. zunächst temporäre Dateien erzeugt, welche erst beim nächsten Kompilieren genutzt werden, müssen eine Reihe von Compile-Befehlen nacheinander aufgerufen werden. 
 Hierzu kann in Texmaker unter Optionen die Funktion \enquote{Texmaker konfigurieren} aufgerufen werden. 
-Unter \enquote{Schnelles Übersetzen} wird dann die folgende Befehlsabfolge eingetragen: \enquote{pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/MikTex/miktex/bin/x64/makeindex.exe" \%.nlo -s nomencl.ist -o \%.nls|biber \%|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" \%.pdf}. 
+Unter \enquote{Schnelles Übersetzen} wird dann die folgende Befehlsabfolge eingetragen: \befehl?pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/MikTex/miktex/bin/x64/makeindex.exe" \%.nlo -s nomencl.ist -o \%.nls|biber \%|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|pdflatex -synctex=1 -interaction=nonstopmode \%.tex|"C:/Program Files/Adobe/Reader 11.0/Reader/AcroRd32.exe" \%.pdf?. 
 
 Gegebenenfalles muss der Pfad zum PDF-Viewer oder der \texttt{makeindex.exe} entsprechend der lokalen Installationsverzeichnisse werden.
 
