@@ -69,7 +69,7 @@
     \printlabeldateextra}} 
 
 \DefineBibliographyStrings{german}{ 
-  nodate    = {{}o.\adddot J\adddot}, 
+  nodate    = {{}o.\adddot \addabbrvspace J\adddot}, 
   andothers = {et\addabbrvspace al\adddot}, 
   urlseen   = {Zugriff}, 
 } 
@@ -79,11 +79,11 @@
     \map{ 
       \step[notfield=translator, final] 
       \step[notfield=editor, final] 
-      \step[fieldset=author, fieldvalue={""{o\noexpand\adddot V.}""}]
+      \step[fieldset=author, fieldvalue={""{o\noexpand\adddot \addabbrvspace V.}""}]
     } 
     \map{ 
       \pernottype{online} 
-      \step[fieldset=location, fieldvalue={o\noexpand\adddot O\noexpand\adddot}] 
+      \step[fieldset=location, fieldvalue={o\noexpand\adddot \addabbrvspace O\noexpand\adddot}] 
     } 
   } 
 } 
