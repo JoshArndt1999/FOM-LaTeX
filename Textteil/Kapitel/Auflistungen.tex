@@ -37,7 +37,8 @@ Im Quelltext wird es folgendermaßen umgesetzt:
 \end{lstlisting}
 
 \section{Itemize}
-Itemize wird verwendet, um verschiedene unnummerierte Aufzählungen zu erzeugen. Um das Kapitel nicht mit zu viel Code zu füllen, werden wir hier auf Codebeispiele verzichten. Die folgenden Listen sind also lediglich Beispiele, deren Quelltext in der \befehl|.tex|-Datei eingesehen werden können. Grundsätzlich ist das Prinzip jedoch dasselbe wie bei \befehl|description| bereits gezeigt.
+Itemize wird verwendet, um verschiedene unnummerierte Aufzählungen zu erzeugen. 
+Um das Kapitel nicht mit zu viel Code zu füllen, werden wir hier auf längere Code-Beispiele verzichten. Grundsätzlich ist das Prinzip jedoch dasselbe wie bei \befehl|description| bereits gezeigt.
 
 \subsection{Beispiel mit Standardauflistungszeichen}
 \begin{itemize}
@@ -97,6 +98,56 @@ Sollen hier die Aufzählungen weiter angepasst werden und zum Beispiel die Zahle
 Die oben beschriebenen Auflistungen brauchen alle relativ viel vertikalen Platz -- Platz, den man nicht immer zur Verfügung hat. 
 Mit dem paralist Paket gibt es ein Paket, das deutlich kompaktere Aufzählungen ermöglicht. 
 Das Paket definiert die folgenden Auflistungen: \texttt{compactitem} als Ersatz für \texttt{itemize}, \texttt{compactenum} als Ersatz für \texttt{enumerate}, sowie \texttt{compactdesc} als Ersatz für \texttt{description}.
+
+\fbox{%
+\begin{minipage}[l]{0.48\textwidth}
+\begin{itemize}
+	\item Ein
+	\item Beispiel
+	\item für eine
+	\item normale
+	\item \texttt{itemize}
+	\item Umgebung
+	\end{itemize}
+\end{minipage}}
+\fbox{%
+\begin{minipage}[l]{0.48\textwidth}
+\begin{compactitem}
+	\item Ein
+	\item Beispiel
+	\item für eine
+	\item kompakte
+	\item \texttt{compactitem}
+	\item Umgebung
+\end{compactitem}
+\end{minipage}}
+\captionof{figure}{Normale und kompakte \texttt{itemize} Umgebung}
+
+
+\fbox{%
+\begin{minipage}[l]{0.48\textwidth}
+\begin{enumerate}
+	\item Ein
+	\item Beispiel
+	\item für eine
+	\item normale
+	\item \texttt{enumerate}
+	\item Umgebung
+	\end{enumerate}
+\end{minipage}}
+\fbox{%
+\begin{minipage}[l]{0.48\textwidth}
+\begin{compactenum}
+	\item Ein
+	\item Beispiel
+	\item für eine
+	\item kompakte
+	\item \texttt{compactenum}
+	\item Umgebung
+\end{compactenum}
+\end{minipage}}
+\captionof{figure}{Normale und kompakte \texttt{enumerate} Umgebung}
+
 
 Wichtiger Hinweis: Mit der \texttt{Beamer}-Klasse ist das Paket leider nicht kompatibel.
 
