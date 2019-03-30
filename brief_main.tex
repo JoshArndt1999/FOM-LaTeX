@@ -1,0 +1,23 @@
+\documentclass[12pt,ngerman,fromalign=right]{scrlttr2}
+\usepackage[T1]{fontenc}
+\usepackage{babel,blindtext,microtype}
+\usepackage[default]{sourcesanspro}
+
+\setkomavar{fromname}{Stefan Tudent}
+\setkomavar{fromaddress}{Musterweg 123 \\ 12345 Essen}
+\setkomavar{fromemail}{Stefan.Tudent@fom.de}
+\setkomavar{frommobilephone}{+49\,156\,1135\,45789}
+
+\setkomavar{firstfoot}{%
+\hrule\vspace*{0.5em}\noindent
+E-Mail: \usekomavar{fromemail} \hfill \usekomavar*{frommobilephone}~\usekomavar{frommobilephone}}
+
+\begin{document}
+\begin{letter}{Max Mustermann \\ Musterweg 1 \\ Musterstadt }
+\opening{Sehr geehrte Damen und Herren,}
+
+\blindtext[4]
+
+\closing{Mit freundlichen Grüßen}
+\end{letter}
+\end{document}
