@@ -90,8 +90,7 @@ Bei einer Aufzählung werden die einzelnen Stichpunkte von eins bis n durchnumme
         \end{enumerate}
     \end{enumerate}
 \end{enumerate}
-Sollen hier die Aufzählungen weiter angepasst werden und zum Beispiel die Zahlen immer arabisch dargestellt werden, so gibt es weitere Quellen, die hierrauf genauer eingehen.\autocite{auflistungen}
-
+Sollen hier die Aufzählungen weiter angepasst werden und zum Beispiel die Zahlen immer arabisch dargestellt werden, so gibt es weitere Quellen, die hierrauf genauer eingehen.\autocite[Vgl.][]{auflistungen}
 
 \section{Kompaktere Auflistungen}
 
@@ -99,55 +98,65 @@ Die oben beschriebenen Auflistungen brauchen alle relativ viel vertikalen Platz 
 Mit dem paralist Paket gibt es ein Paket, das deutlich kompaktere Aufzählungen ermöglicht. 
 Das Paket definiert die folgenden Auflistungen: \texttt{compactitem} als Ersatz für \texttt{itemize}, \texttt{compactenum} als Ersatz für \texttt{enumerate}, sowie \texttt{compactdesc} als Ersatz für \texttt{description}.
 
-\fbox{%
-\begin{minipage}[l]{0.48\textwidth}
-\begin{itemize}
-	\item Ein
-	\item Beispiel
-	\item für eine
-	\item normale
-	\item \texttt{itemize}
-	\item Umgebung
-	\end{itemize}
-\end{minipage}}
-\fbox{%
-\begin{minipage}[l]{0.48\textwidth}
-\begin{compactitem}
-	\item Ein
-	\item Beispiel
-	\item für eine
-	\item kompakte
-	\item \texttt{compactitem}
-	\item Umgebung
-\end{compactitem}
-\end{minipage}}
-\captionof{figure}{Normale und kompakte \texttt{itemize} Umgebung}
+\begin{figure}[H] 
+   \centering 
+   \caption{Normale und kompakte \texttt{itemize} Umgebung} 
+   \label{fig:compactItem} 
+		\fbox{%
+		\begin{minipage}[l]{0.48\textwidth}
+		\begin{itemize}
+			\item Ein
+			\item Beispiel
+			\item für eine
+			\item normale
+			\item \texttt{itemize}
+			\item Umgebung
+			\end{itemize}
+		\end{minipage}}
+		\fbox{%
+		\begin{minipage}[l]{0.48\textwidth}
+		\begin{compactitem}
+			\item Ein
+			\item Beispiel
+			\item für eine
+			\item kompakte
+			\item \texttt{compactitem}
+			\item Umgebung
+		\end{compactitem}
+		\end{minipage}}
+   \par\bigskip  
+   Quelle: eigene Darstellung 
+\end{figure} 
 
-
-\fbox{%
-\begin{minipage}[l]{0.48\textwidth}
-\begin{enumerate}
-	\item Ein
-	\item Beispiel
-	\item für eine
-	\item normale
-	\item \texttt{enumerate}
-	\item Umgebung
-	\end{enumerate}
-\end{minipage}}
-\fbox{%
-\begin{minipage}[l]{0.48\textwidth}
-\begin{compactenum}
-	\item Ein
-	\item Beispiel
-	\item für eine
-	\item kompakte
-	\item \texttt{compactenum}
-	\item Umgebung
-\end{compactenum}
-\end{minipage}}
-\captionof{figure}{Normale und kompakte \texttt{enumerate} Umgebung}
-
+\begin{figure}[H] 
+   \centering 
+   \caption{Normale und kompakte \texttt{itemize} Umgebung} 
+   \label{fig:compactItem} 
+		\fbox{%
+		\begin{minipage}[l]{0.48\textwidth}
+		\begin{enumerate}
+			\item Ein
+			\item Beispiel
+			\item für eine
+			\item normale
+			\item \texttt{enumerate}
+			\item Umgebung
+			\end{enumerate}
+		\end{minipage}}
+		\fbox{%
+		\begin{minipage}[l]{0.48\textwidth}
+		\begin{compactenum}
+			\item Ein
+			\item Beispiel
+			\item für eine
+			\item kompakte
+			\item \texttt{compactenum}
+			\item Umgebung
+		\end{compactenum}
+		\end{minipage}}
+   \par\bigskip  
+   Quelle: eigene Darstellung 
+\end{figure} 
 
 Wichtiger Hinweis: Mit der \texttt{Beamer}-Klasse ist das Paket leider nicht kompatibel.
 
