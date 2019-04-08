@@ -73,3 +73,16 @@ Dies sähe dann so aus:
     y & = & b_x^{2}+c_x+d\\
     y & = & a_x^{3}+b_x^{2}
 \end{array}\]
+
+\section{Unternummerierung von Gleichungen}
+
+Um die von der FOM Vorlage geforderte Unternummerierung von Gleichungen zu erreichen, kann man die \texttt{gather} Umgebung nutzen.
+
+\begin{gather}
+x = a +  b +c \label{eq:gat}\\
+yt = a + b + d \tag{\ref{eq:gat}a} \\
+ydy = a + b + d \tag{\ref{eq:gat}b}
+\end{gather}
+
+
+
