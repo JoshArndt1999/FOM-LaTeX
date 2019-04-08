@@ -78,10 +78,20 @@ Dies sähe dann so aus:
 
 Um die von der FOM Vorlage geforderte Unternummerierung von Gleichungen zu erreichen, kann man die \texttt{gather} Umgebung nutzen. Hier setzt man in die erste Zeile ein Label, auf das dann in den folgenden Zeilen referenziert. Über den \texttt{\textbackslash tag} Befehl wird die Referenz eingebaut.
 
+
+\begin{lstlisting}
 \begin{gather}
 x = a +  b +c \label{eq:gat}\\
-yt = a + b + d \tag{\ref{eq:gat}a} \\
-ydy = a + b + d \tag{\ref{eq:gat}b}
+t = a + b + d \tag{\ref{eq:gat}a} \\
+y = a + b + d \tag{\ref{eq:gat}b}
+\end{gather}
+\end{lstlisting}
+
+
+\begin{gather}
+x = a +  b +c \label{eq:gat}\\
+t = a + b + d \tag{\ref{eq:gat}a} \\
+y = a + b + d \tag{\ref{eq:gat}b}
 \end{gather}
 
 
