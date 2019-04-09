@@ -76,23 +76,27 @@ Dies sähe dann so aus:
 
 \section{Unternummerierung von Gleichungen}
 
-Um die von der FOM Vorlage\footcite[S. 20]{fomleitfaden} geforderte Unternummerierung von Gleichungen zu erreichen, kann man die \texttt{gather} Umgebung nutzen. Hier setzt man in die erste Zeile ein Label, auf das dann in den folgenden Zeilen referenziert. Über den \texttt{\textbackslash tag} Befehl wird die Referenz eingebaut.
+Um die von der FOM Vorlage\footcite[S. 20]{fomleitfaden} geforderte Unternummerierung von Gleichungen zu erreichen, kann man die \texttt{subequations} Umgebung nutzen. Hier setzt man in die erste Zeile ein Label, auf das dann in den folgenden Zeilen referenziert. Über den \texttt{\textbackslash tag} Befehl wird die Referenz auf das Label eingebaut und die Unternummer manuell vergeben.
 
 
 \begin{lstlisting}
-\begin{gather}
-x = a +  b +c \label{eq:gat}\\
-t = a + b + d \tag{\ref{eq:gat}a} \\
-y = a + b + d \tag{\ref{eq:gat}b}
-\end{gather}
+\begin{subequations}\label{eq:gat}
+    \begin{align}
+    x & = a + b +c \tag{\ref{eq:gat}}\\
+    x_t & = a + d \tag{\ref{eq:gat}a}\\
+    y_{abc} & = a + b + d\tag{\ref{eq:gat}b}
+    \end{align}
+\end{subequations}
 \end{lstlisting}
 
 
-\begin{gather}
-x = a +  b +c \label{eq:gat}\\
-t = a + b + d \tag{\ref{eq:gat}a} \\
-y = a + b + d \tag{\ref{eq:gat}b}
-\end{gather}
 
+\begin{subequations}\label{eq:gat}
+    \begin{align}
+    x & = a + b +c \tag{\ref{eq:gat}}\\
+    x_t & = a + d   \tag{\ref{eq:gat}a}\\
+    y_{abc} & = a + b + d\tag{\ref{eq:gat}b}
+    \end{align}
+\end{subequations}
 
 
