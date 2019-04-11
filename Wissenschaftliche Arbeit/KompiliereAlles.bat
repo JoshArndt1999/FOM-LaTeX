@@ -1,5 +1,6 @@
-call pdflatex -draftmode main.tex
-call biber main
-call makeindex -q main.nlo -s nomencl.ist -o main.nls
-call pdflatex main.tex
-call pdflatex main.tex
+SET dokument=main
+call pdflatex -draftmode %dokument%.tex
+call biber %dokument%
+call makeindex -q %dokument%.nlo -s nomencl.ist -o %dokument%.nls
+call pdflatex %dokument%.tex
+call pdflatex %dokument%.tex
