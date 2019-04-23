@@ -13,16 +13,19 @@ Es folgt eine kleine Anleitung, mit der auch das kein Problem sein sollte.
 
 MiKTeX ist neben \TeX\ Live und MacTex auch eine sehr gute \TeX\ Distribution. Es gibt MikTeX nur für Windows, eines der Features ist die automatische Nach-Installation von Paketen, sofern eine Internetverbindung besteht.
 
-Der Download Link für MiKTeX ist in den Quellen vorhanden.\autocite[Vgl.][]{miktex} Hierbei kann der gewöhnliche \directAutocite{miktex}{Installer} verwendet werden. 
+Der Download Link für MiKTeX ist in den Quellen vorhanden.\indirekt{miktex} Hierbei kann der gewöhnliche \direkt{miktex}{Installer} verwendet werden. 
 
 Anschließend führt das Installationsprogramm den Nutzer durch den gesamten Installationsprozess. Hierbei muss nichts besonderes beachtet werden. Ebenso wie \TeX\ Live unter Windows bringt MikTeX \TeX Works als Editor mit.
 
-\section{Texmaker}
+\section{Editieren der Tex Dateien}
+Der Inhalt sämtlicher Dateien kann einfach mit Notepad++ oder jedem anderen Editor bearbeitet werden. Durch Ausführen der \befehl?KompiliereAlles.bat? lässt sich anschließend das PDF-Dokument erstellen. Alternativ kann ein \LaTeX\-Editor verwendet werden. Hier ist jedoch die Konfiguration des Editors notwendig, was je nach Installation schnell zu Problemen führen kann. Wer auf Nummer sicher gehen möchte nutzt also einfach die angegebene Datei.
+
+\subsection{Texmaker}
 
 Texmaker ist ein bekannter Editor im \LaTeX-Umfeld. 
 Zwar ist es möglich, sämtliche Dokumente in Texteditoren wie Notepad++ zu erstellen und diese über die Eingabeaufforderung zu einem PDF (\nomenclature{PDF}{Portable Document Format}Portable Document Format) umzuwandeln, doch bietet TeXMaker angenehme Funktionen für die erleichterte Nutzung.
 
-Auch hier gibt es einen normalen Installer zum Download, welcher alle weiteren Schritte erklärt.\autocite[Vgl.][]{texmaker}
+Auch hier gibt es einen normalen Installer zum Download, welcher alle weiteren Schritte erklärt.\indirekt{texmaker}
 
 Zum Einrichten von Texmaker muss noch eine weitere Einstellung vorgenommen werden. 
 Da \LaTeX\ zum Bilden von Referenzen, Generieren von Verzeichnissen, etc. zunächst temporäre Dateien erzeugt, welche erst beim nächsten Kompilieren genutzt werden, müssen eine Reihe von Compile-Befehlen nacheinander aufgerufen werden. 

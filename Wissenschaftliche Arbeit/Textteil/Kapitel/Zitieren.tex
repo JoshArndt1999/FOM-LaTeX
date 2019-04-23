@@ -7,8 +7,8 @@ Um alle Formvorschriften einzuhalten empfehle ich, lediglich drei verschiedene B
 
 \begin{description}
 	\item[{\textbackslash cite[a][b]\{c\}}] gibt den Fußnoteninhalt nicht in einer Fußnote, sondern direkt im Text aus. Dies wird vor allem bei der Quellenangabe von Abbildungen verlangt.
-	\item[{\textbackslash autocite[a][b]\{c\}}] gibt eine gewöhnliche Fußnote mit Quelle aus.
-	\item[{\textbackslash directAutocite[a][b]\{c\}\{d\}}] erzeugt ein direktes Zitat mit zugehöriger Fußnote. Die Anführungszeichen werden je nach vorheriger Festlegung gewählt (hier standardmäßig Guillements).
+	\item[{\textbackslash indirekt[b]\{c\}}] gibt eine gewöhnliche Fußnote mit Quelle aus. Hier wird automatisch das Präfix \enquote{Vgl.} gesetzt.
+	\item[{\textbackslash direkt[b]\{c\}\{d\}}] erzeugt ein direktes Zitat mit zugehöriger Fußnote. Die Anführungszeichen werden je nach vorheriger Festlegung gewählt (hier standardmäßig Guillements).
 \end{description}
 
 Für die Parameter a, b, c und d gilt:
@@ -22,7 +22,7 @@ Für die Parameter a, b, c und d gilt:
 
 Hier ein Beispiel:
 \begin{lstlisting}
-\directAutocite[12]{bsp}{Das hier ist ein Zitat}
+\direkt[12]{bsp}{Das hier ist ein Zitat}
 \end{lstlisting}
 
-Ausgabe: \directAutocite[12]{bsp}{Das hier ist ein Zitat}
+Ausgabe: \direkt[12]{bsp}{Das hier ist ein Zitat}
