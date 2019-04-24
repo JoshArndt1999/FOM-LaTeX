@@ -1,3 +1,6 @@
+\renewcommand*{\bibfont}{\normalfont\normalsize\singlespacing\raggedright}
+\setlength{\bibinitsep}{1.5\baselineskip}
+
 \setlength\bibhang{1cm} 
 
 \DeclareLabeldate{% 
@@ -85,9 +88,11 @@
 \DeclareSourcemap{ 
   \maps[datatype=bibtex]{ 
     \map{ 
+      \pernottype{set} 
       \step[notfield=translator, final] 
       \step[notfield=editor, final] 
-      \step[fieldset=author, fieldvalue={""{o\noexpand\adddot \addabbrvspace V.}""}]
+      \step[fieldset=author, fieldvalue={\string{o.\noexpand\,V\noexpand\adddot\string}}, final] 
+      \step[fieldset=sortname, fieldvalue={zzzzzzzzz}] 
     } 
     \map{ 
       \pernottype{online} 
