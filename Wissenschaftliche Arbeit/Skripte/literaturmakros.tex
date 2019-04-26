@@ -78,6 +78,13 @@
     \printfield{usera}% 
     \setunit{\printdelim{titleyeardelim}}% 
     \printlabeldateextra}} 
+	
+\renewbibmacro*{date}{% 
+  \usebibmacro{bbx:ifmergeddate} 
+    {} 
+    {\iffieldundef{year} 
+       {\printtext[date]{\bibstring{nodate}}} 
+       {\printdate}}} 
 
 \DefineBibliographyStrings{german}{ 
   nodate    = {{}o.\adddot \addabbrvspace J\adddot}, 
