@@ -127,5 +127,5 @@
     {\printfield{postnote}}}
     
 %\newcommand{\directAutocite}[3][]{\enquote{#3}\autocite[#1]{#2}}%Command für direkte Zitate
-\newcommand{\direkt}[3][]{\enquote{#3}\footnote{\cite[#1]{#2}}}%Command für direkte Zitate
-\newcommand{\indirekt}[2][]{\footnote{\cite[Vgl.][#1]{#2}}}%Command für indirekte Zitate
+\newcommand{\direkt}[3][]{\enquote{#3}\autocite[#1]{#2}}%Command für direkte Zitate
+\newcommand{\indirekt}[2][]{\autocite[Vgl.][#1]{#2}}%Command für indirekte Zitate
