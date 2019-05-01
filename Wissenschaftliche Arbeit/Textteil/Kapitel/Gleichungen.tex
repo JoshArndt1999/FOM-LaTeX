@@ -6,19 +6,15 @@ Ein großer Vorteil der Nutzung von \LaTeX\ ist die perfekte Darstellung von For
 
 \section{Einzelne Gleichungen und Funktionen}
 Formeln können entweder innerhalb einer Zeile angezeigt werden wie hier (\(a+b^2=\frac{34}{\sqrt{4}}\)), oder aber abgesetzt werden:
-
 \[
     a+b^2=\frac{34}{\sqrt{4}}
 \]
-
 Außerdem können Formeln nummeriert werden. 
 Oft sieht man im Netz noch die Notation mit einfachen Dollarzeichen für die Inline-Notation und doppelten Dollar-Zeichen für abgesetzte Formeln. 
 Dies ist jedoch \TeX-Notation und wird für \LaTeX-Dokumente nicht empfohlen.
-
 \begin{equation}
     a+b^2=\frac{34}{\sqrt{4}}
 \end{equation}
-
 Der Code hierfür würde beispielsweise folgendermaßen lauten:
 \begin{lstlisting}
 %Formel in Zeile
@@ -39,21 +35,21 @@ Der Code hierfür würde beispielsweise folgendermaßen lauten:
 
 Um ganze Blöcke von Gleichungen zu erstellen, in welchen die Gleichheitszeichen untereinander dargestellt werden, nutzt man folgende Funktion:
 \begin{lstlisting}
-\begin{eqnarray}
-    y & = & d\\
-    y & = & c_x+d\\
-    y & = & b_x^{2}+c_x+d\\
-    y & = & a_x^{3}+b_x^{2}
-\end{eqnarray}
+\begin{align}
+    y &=& d\\
+    y &=& c_x+d\\
+    y &=& b_x^{2}+c_x+d\\
+    y &=& a_x^{3}+b_x^{2}
+\end{align}
 \end{lstlisting}
 
 Es resultiert in folgendem Ergebnis:
-\begin{eqnarray}
-    y & = & d\\
-    y & = & c_x+d\\
-    y & = & b_x^{2}+c_x+d\\
-    y & = & a_x^{3}+b_x^{2}
-\end{eqnarray}
+\begin{align}
+    y &=& d\\
+    y &=& c_x+d\\
+    y &=& b_x^{2}+c_x+d\\
+    y &=& a_x^{3}+b_x^{2}
+\end{align}
 
 Alternativ können die Blöcke ohne Nummerierung und etwas anders ausgerichtet folgendermaßen erstellt werden:
 \begin{lstlisting}
@@ -66,7 +62,6 @@ Alternativ können die Blöcke ohne Nummerierung und etwas anders ausgerichtet f
 \end{lstlisting}
 
 Dies sähe dann so aus:
-
 \[\begin{array}{lcr}
     y & \not= & d\\
     y_{a}& = & c_x+d\\
@@ -75,10 +70,7 @@ Dies sähe dann so aus:
 \end{array}\]
 
 \section{Unternummerierung von Gleichungen}
-
 Um die von der FOM Vorlage\indirekt[20]{fomleitfaden} geforderte Unternummerierung von Gleichungen zu erreichen, kann man die \texttt{subequations} Umgebung nutzen. Hier setzt man in die erste Zeile ein Label, auf das dann in den folgenden Zeilen referenziert. Über den \texttt{\textbackslash tag} Befehl wird die Referenz auf das Label eingebaut und die Unternummer manuell vergeben.
-
-
 \begin{lstlisting}
 \begin{subequations}\label{eq:gat}
     \begin{align}
@@ -88,9 +80,6 @@ Um die von der FOM Vorlage\indirekt[20]{fomleitfaden} geforderte Unternummerieru
     \end{align}
 \end{subequations}
 \end{lstlisting}
-
-
-
 \begin{subequations}\label{eq:gat}
     \begin{align}
     x & = a + b +c \tag{\ref{eq:gat}}\\
