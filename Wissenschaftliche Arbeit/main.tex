@@ -79,7 +79,7 @@
 \input{Skripte/literaturmakros}%Datei mit Zitieranpassungen und Format des Literaturverzeichnisses
 \input{Skripte/quelltext}%Sauber formatierter Quelltext
 \addbibresource{lit.bib}%include der Literatur Datenbank
-%\nocite{*}%UNBEDINGT AUSKOMMENTIEREN. ES WERDEN AUCH NICHT ZITIERTE QUELLEN VERZEICHNET
+%\nocite{*}%UNBEDINGT AUSKOMMENTIEREN. DURCH DIESEN BEFEHL WERDEN AUCH NICHT ZITIERTE QUELLEN VERZEICHNET
 %\addbibresource{biblatex-examples.bib}%Beispielliteratur einfügen
 
 
@@ -120,9 +120,16 @@
 \pagenumbering{Roman}%römische Nummerierung
 \setcounter{page}{\thesavepage}%Seitencounter auf die gespeicherte Zahl setzen
 
-\addchap{Literatur}
+%--------FÜR HAUSARBEIT NACH LEITFADEN----------------------
+\addchap{Literaturverzeichnis}
 \printbibliography[nottype=online,heading=none]%Literaturverzeichnis der NICHT-Onlinequellen drucken und ins Inhaltsverzeichnis einfügen
 \section*{Internetquellen}
-\printbibliography[type=online,heading=none,title={Internetquellen}]%Literaturverzeichnis der Onlinequellen drucken und ins Inhaltsverzeichnis einfügen 
+\printbibliography[type=online,heading=none,title={Internetquellen}]%Literaturverzeichnis der Onlinequellen drucken.
+%--------FÜR HAUSARBEIT BEI KRAUSE----------------------
+% \addchap{Literaturverzeichnis}
+% \printbibliography[nottype=online, nottype=article,heading=none]%Literaturverzeichnis der NICHT-Artikel/Onlinequellen drucken.
+% \addchap{Quellenverzeichnis}
+% \printbibliography[filter=articleonline,heading=none]%Literaturverzeichnis der /ArtikelOnlinequellen drucken.
+%-------------------------------------------------------
 \input{Textteil/Kapitel/Erklaerung}
 \end{document}%Ende des Dokumentes
