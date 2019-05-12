@@ -1,6 +1,5 @@
 %!TEX TS-program = Arara
 % arara: pdflatex: {shell: yes}
-
 \documentclass[12pt,ngerman]{beamer}
 
 \usepackage[utf8]{inputenc}
@@ -10,11 +9,10 @@
 \usepackage{graphicx}
 \usepackage{csquotes}
 \usepackage{xcolor}
-\usepackage[]{listings}
+\usepackage{listings}
 
 %%%%%%%%%%%%%%%%%%% Konfiguration
-
-%%%% Color Definitions
+%%%% Farbdefinitionen
 \definecolor{fomgruen}{RGB}{0,153,139}
 
 % für Listings
@@ -48,7 +46,6 @@
     captionpos=b%
 }
 
-
 % keine Symbole rechts unten
 \setbeamertemplate{navigation symbols}{}
 
@@ -56,13 +53,7 @@
 \setbeamercolor{frametitle}{fg=fomgruen}
 \setbeamercolor{structure}{fg=fomgruen}
 
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%% Konfiguration
-
+%%%%%%%%%%%%%%%%%%% Ende der Konfiguration
 
 \author{Max Mustermann}
 \title{FOM-Musterpräsentation}
@@ -141,7 +132,7 @@
 \begin{center}
 \begin{figure}
 \rule{\textwidth}{0.5\textwidth}
-\caption{Eine Abbildung}
+\caption{Eine Abbildung, Quelle: Maria Mustermann, 1995}
 \end{figure}
 \end{center}
 
@@ -174,7 +165,7 @@ x_{1, 2} = -\frac{p}{2} \pm \sqrt{ \left(\frac{p}{2}\right)^2 -q }
 \begin{frame}[containsverbatim] % wichtig!
 \frametitle{Listings}
 
-\begin{lstlisting}[language={Python},caption={Python Code}]
+\begin{lstlisting}[language={Python},caption={Python Code},morekeywords={getLogger, propagate, setLevel}]
 logger = logging.getLogger("Logfile.log")
 logger.propagate = False
 logger.setLevel(logging.DEBUG)
