@@ -10,7 +10,11 @@
 \documentclass[12pt, a4paper, ngerman,toc=chapterentrydotfill, listof=totoc,bibliography=totoc,captions=figureheading,hidelinks,listof=nochaptergap,fleqn]{scrreprt} 
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
-\usepackage{palatino}%schönere schrift 
+
+\usepackage{arev} % Mathematik-Font ohne Serifen
+\usepackage{helvet} % Helvetica (Arial) ohne Serifen
+\renewcommand{\rmdefault}{\sfdefault} % Standardschrift setzen
+
 \usepackage{microtype} % Mikrotypografie
 \usepackage[ngerman]{babel}%Sprache und Silbentrennung
 \usepackage{paralist}
