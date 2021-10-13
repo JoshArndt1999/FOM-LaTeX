@@ -11,9 +11,9 @@
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 
-\usepackage{arev} % Mathematik-Font ohne Serifen
-\usepackage{helvet} % Helvetica (Arial) ohne Serifen
-\renewcommand{\rmdefault}{\sfdefault} % Standardschrift setzen
+% \usepackage{arev} % Mathematik-Font ohne Serifen
+% \usepackage{helvet} % Helvetica (Arial) ohne Serifen
+% \renewcommand{\rmdefault}{\sfdefault} % Standardschrift setzen
 
 \usepackage{microtype} % Mikrotypografie
 \usepackage[ngerman]{babel}%Sprache und Silbentrennung
@@ -115,7 +115,8 @@
 \pagenumbering{arabic}%arabische Nummerierung
 
 \input{Textteil/textteil}%Datei mit eigentlichem Text einbinden
-\include{Textteil/Kapitel/Anhang}
+
+% \include{Textteil/Kapitel/Anhang} Anhänge
 %-------------------------------------------------------------------------------
 %Verzeichnisse
 %-------------------------------------------------------------------------------
@@ -133,5 +134,6 @@
 % \addchap{Quellenverzeichnis}
 % \printbibliography[filter=articleonline,heading=none]%Literaturverzeichnis der /ArtikelOnlinequellen drucken.
 %-------------------------------------------------------
-\input{Textteil/Kapitel/Erklaerung}
+
+% \input{Textteil/Kapitel/Erklaerung} Erklärung
 \end{document}%Ende des Dokumentes
