@@ -11,13 +11,9 @@
 \usepackage[T1]{fontenc} 
 \usepackage[utf8]{inputenc}
 
-\usepackage{arev} % Mathematik-Font ohne Serifen
-\usepackage{helvet} % Helvetica (Arial) ohne Serifen
-\renewcommand{\rmdefault}{\sfdefault} % Standardschrift setzen
-
 \usepackage{microtype} % Mikrotypografie
 \usepackage[ngerman]{babel}%Sprache und Silbentrennung
-\usepackage{paralist}
+\usepackage{paralist} % Kurze Aufzählungen und Nummerierungen
 
 \usepackage[onehalfspacing]{setspace}%Zeilenabstand auf 1,5 stellen
 \usepackage[a4paper, left=4cm, right=2cm, top=1cm, bottom=2cm, headsep=2cm, includehead=true, footskip=0cm, includefoot=true, headheight = 1cm]{geometry} 
@@ -29,6 +25,19 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \counterwithout{equation}{chapter}%Nummerierung aufsteigend ohne Kapitelnummer
+
+%-------------------------------------------------------------------------------
+%Schriften
+%-------------------------------------------------------------------------------
+% Für Times New Roman als Standard
+% https://tex.stackexchange.com/questions/153168/how-to-set-document-font-to-times-new-roman-by-command
+\usepackage{newtxtext,newtxmath}
+
+% Für eine serifenlose Schrift
+%\usepackage{arev} % Mathematik-Font ohne Serifen
+%\usepackage{helvet} % Helvetica (Arial) ohne Serifen
+%\renewcommand{\rmdefault}{\sfdefault} % Standardschrift setzen
+
 
 % Mathe Einrückung
 \setlength{\mathindent}{1cm}
